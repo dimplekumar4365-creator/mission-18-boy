@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MISSION 18</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: white;
+  padding: 22px;
+}
+header { text-align: center; padding: 30px 0; }
+h1 { color: #64b5f6; font-size: 32px; }
+.subtitle { color: #bdc8d8; }
+.card {
+  background: #1e2b40;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 16px;
+}
+button {
+  background: #3182ce;
+  border: 0;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+input {
+  padding: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: 0;
+  margin: 10px 0;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>MISSION 18 🚀</h1>
+<p class="subtitle">Your Student Productivity Coach</p>
+</header>
+
+<div class="card">
+<h2>Welcome, Student!</h2>
+<p>Your journey to success starts today.</p>
+</div>
+
+<div class="card">
+<h2>🎯 Daily Study Target</h2>
+<p>Standard target: 10 hours</p>
+<input type="number" id="hours" placeholder="Enter your study hours">
+<button onclick="saveHours()">Save Progress</button>
+<p id="result"></p>
+</div>
+
+<div class="card">
+<h2>📖 Daily Journal</h2>
+<input id="journal" placeholder="What did you learn today?">
+<button onclick="saveJournal()">Save Journal</button>
+<p id="journalResult"></p>
+</div>
+
+<script>
+function saveHours() {
+ const h = document.getElementById("hours").value;
+ document.getElementById("result").innerText =
+ h ? "Great work! You studied " + h + " hours today." : "Enter your hours first.";
+}
+function saveJournal() {
+ const j = document.getElementById("journal").value;
+ document.getElementById("journalResult").innerText =
+ j ? "Journal entry saved on this screen!" : "Write something first.";
+}
+</script>
+</body>
+</html>
